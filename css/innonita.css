@@ -1,0 +1,561 @@
+@charset "UTF-8";
+/*//////////////
+FONTS 
+//////////////*/
+@font-face {
+  font-family: "MicrogrammaMediumExtended";
+  src: url('../assets/fonts/microgramma-medium.woff2') format('woff2'), url('assets/fonts/microgramma-medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: "MicrogrammaBoldExtended";
+  src: url('../assets/fonts/microgramma-bold.woff2') format('woff2'), url('assets/fonts/microgramma-bold.woff') format('woff');
+}
+
+
+
+/*//////////////
+GLOBAL 
+//////////////*/
+body {
+	background: #c1e2f4;
+	color:#004aa9;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	overflow-x: hidden;
+	position: relative;
+}
+
+h1, h2, h3, h4, .btn {
+	font-family: 'MicrogrammaBoldExtended', sans-serif;
+	text-transform: uppercase;
+}
+
+.navbar-nav li a {
+	font-family: 'MicrogrammaMediumExtended', sans-serif;
+	text-transform: uppercase;
+} 
+
+.navbar-nav li a.active {
+	border:1px solid #004aa9
+} 
+
+.page-content {
+	padding: 120px 0
+}
+
+img {
+	max-width: 100%
+}
+
+	
+section {
+	position: relative;
+}
+
+/*//////////////
+TYPO
+//////////////*/
+.big-title{
+	text-shadow: 100px -30px 0px rgba(0,74,169,0.16)
+}
+
+h1 {
+	color:#004aa9;
+	font-size: 70px;
+	line-height: 60px;
+}
+
+h2 {
+	color:#004aa9;
+	font-size: 55px;
+	line-height: 55px;
+}
+
+
+.about-title:before,
+.about-title:after,
+.training-title:before,
+.training-title:after,
+.database-title:before,
+.database-title:after,
+.contact-title:before,
+.contact-title:after{
+	content: '';
+	display: block;
+	position: absolute;
+}
+
+.about-title:before {
+	background: url("../assets/imgs/stella-gialla.png") center center no-repeat;
+	background-size: 100% auto;
+	height: 10vw;
+	left: 28%;
+	top:24%;
+	width: 10vw;
+}
+
+.about-title:after {
+	background: url(../assets/imgs/coso-rosa.png) center center no-repeat;
+    background-size: contain;
+    height: 5vw;
+    right: 30%;
+    top: 33%;
+    width: 8vw;
+    z-index: 3;
+}
+
+.about-element, 
+.database-element {
+	background: url(../assets/imgs/righe-verdi.png) 70% center no-repeat;
+    background-size: auto 100%;
+    height: 40px;
+}
+
+.training-title:before {
+	background: url("../assets/imgs/lunetta-blu.png") center center no-repeat;
+	background-size: 100% auto;
+	height: 8vw;
+	left: 22%;
+	top:30%;
+	width: 8vw;
+}
+
+.training-title:after {
+	background: url("../assets/imgs/cerchietto-arancio.png") center center no-repeat;
+    background-size: contain;
+    height: 5vw;
+    right: 20%;
+    top: 33%;
+    width: 8vw;
+    z-index: 3;
+}
+
+.training-element {
+	background: url("../assets/imgs/svirgolino.png") 70% center no-repeat;
+    background-size: auto 100%;
+    height: 40px;
+}
+
+.database-title:before {
+	background: url("../assets/imgs/macchia-arancio.png") center center no-repeat;
+	background-size: 100% auto;
+	height: 6vw;
+	left: 27%;
+	top:37%;
+	width: 6vw;
+}
+
+.database-title:after {
+	background: url("../assets/imgs/corona-arancio.png") center center no-repeat;
+    background-size: contain;
+    height: 5vw;
+    right: 20%;
+    top: 28%;
+    width: 8vw;
+    z-index: 3;
+}
+
+.contact-title:before{
+	background: url("../assets/imgs/stella-gialla.png") center center no-repeat;
+	background-size: 100% auto;
+	height: 10vw;
+	right: 90%;
+	top:33%;
+	width: 10vw;
+}
+
+.contact-title:after{
+	background: url("../assets/imgs/coso-rosa.png") center center no-repeat;
+	background-size: 100% auto;
+	height: 7vw;
+	left: 55%;
+	top:27%;
+	width: 7vw;
+}
+
+/*//////////////
+HEADER 
+//////////////*/
+.navbar {
+	border-bottom:1px solid #00b760;
+	position: fixed;
+	top:0;
+	width: 100vw;
+	z-index: 99
+}
+
+.navbar-brand img {
+	height: 30px;
+	margin:20px 0
+}
+
+.navbar-nav li a {
+	text-transform: uppercase;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0;
+}
+/*//////////////
+HERO
+//////////////*/
+.hero {
+	background-attachment: fixed!important;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	width: 100%
+}
+
+.hero-home {
+	background: url(../assets/imgs/home_BG-01.jpg);
+}
+
+.hero-about {
+	background: url("../assets/imgs/about_BG-01.jpg")
+}
+
+.hero-training {
+	background: url("../assets/imgs/training_BG.jpg");
+	background-position: right center
+}
+
+.hero-database {
+	background: url("../assets/imgs/database_BG.jpg")
+}
+
+.hero-contact {
+	background: url("../assets/imgs/contact_BG.png");
+}
+
+
+.hero-overlay {
+	display: block;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	width: 100vw;
+	z-index: 1;
+}
+
+.hero-overlay img {
+	margin-top:120px;
+	max-width: 500px;
+	width: 35%
+}
+
+.training-overlay {
+	background-size: cover;
+	background: url("../assets/imgs/training-elements.png") center center no-repeat
+}
+
+.database-overlay {
+	background-image: url("../assets/imgs/stella-gialla.png");
+	background-position: 45% 30%;
+	background-repeat: no-repeat;
+	background-size: 4% auto;
+}
+
+.hero-block {
+	padding: 140px 0;
+	height: 100vh;
+	z-index: 2
+}
+
+.hero-content {
+	z-index: 4
+}
+
+
+
+.freccette {
+	bottom: 20px;
+	position: absolute;
+	right: 20px;
+	width: 25px;
+	z-index: 4
+}
+
+.freccetta {
+	margin: 5px 0;
+	width: 25px;
+}
+
+.project {
+	background:url("../assets/imgs/proj-BG.png") center bottom no-repeat;
+	background-size: cover
+}
+
+/*//////////////
+FORM
+//////////////*/
+input[type=text], 
+input[type=email],
+textarea {
+	background: #c1e2f4;
+	border: 1px solid #004aa9;
+	margin: 20px 0 
+}
+/*//////////////
+MOBILE FIXES
+//////////////*/
+@media (max-width:1024px){
+	h1 {
+		font-size:60px;
+		line-height: 50px;
+	}
+	
+	h2 {
+		font-size: 40px;
+    	line-height: 35px;
+	}
+	
+	.big-title {
+		text-shadow: 40px -20px 0px rgb(0,74,169,0.16)
+	}
+	
+	
+	.hero-overlay img {
+		display: none;
+	}
+	
+	.home-overlay {
+		background: url("../assets/imgs/home-elements_mobile.png") center center no-repeat;
+		background-size: cover
+	}
+	
+	.project {
+		background:url("../assets/imgs/proj_BG-mobile.png") center center no-repeat;
+		background-size: cover
+	}
+}
+
+@media (max-width:991px){
+	.navbar-collapse {
+		background: #c1e2f4;
+		margin: 0 -10px -10px -10px;
+		padding: 20px
+	}
+
+	.navbar-collapse li a {
+		text-align: center
+	}
+}
+
+@media (max-width:676px){
+	h1 {
+		font-size:50px;
+		line-height: 45px;
+	}
+	
+	h2 {
+		font-size: 35px;
+    	line-height: 30px;
+	}
+	
+	section {
+		padding-left: 20px;
+		padding-right: 20px
+	}
+	
+	section#home,
+	section#about,
+	section#training,
+	section#database,
+	section#contacts {
+		padding-left: 0;
+		padding-right: 0
+	}
+	
+	.project {
+		background:url("../assets/imgs/proj-BG-smallscreen.png") center center no-repeat;
+		background-size: cover
+	}
+	
+}
+/*//////////////
+TILTES MOBILE FIXES
+//////////////*/
+@media(max-width:1600px){
+	.about-title:before,
+	.training-title:before,
+	.database-title:before{
+		left:26%;
+		top:35%
+	}
+	.about-title:after,
+	.training-title:after,
+	.database-title:after{
+		right:22%;
+		top:33%
+	}
+	
+	.contact-title:after {
+		top:33%
+	}
+}
+
+@media(max-width:1280px){
+	.about-title:before {
+		left:20%;
+		top:30%
+	}
+	.about-title:after {
+		right:15%
+	}
+	
+	.training-title:before {
+		left:20%
+	}
+	
+	.training-title:after {
+		right:16%
+	}
+	
+	.database-title:before {
+		left:18%
+	}
+	
+	.database-title:after {
+		right:15%;
+		top:30%
+	}
+	
+	.contact-title:before {
+		right:93%;
+		top:27%
+	}
+	
+	.contact-title:after {
+		left: 40%;
+	}
+}
+
+@media(max-width:1199px){
+	.contact-title:before {
+		right:90%;
+		top:8%
+	}
+	
+	.contact-title:after {
+		left: 74%;
+		top:4%
+	}
+}
+
+@media(max-width:950px){
+	.about-title:before {
+		left:15%;
+	}
+	
+	.about-title:after {
+		top:35%;
+	}
+	
+	
+	.training-title:before {
+		left:12%;
+	}
+	
+	.training-title:after {
+		right:15%;
+	}
+	
+	.database-title:before {
+		left:18%;
+		top:37%
+	}
+	
+	.database-title:after {
+		right:17%;
+		top:33%;
+	}
+	
+	.contact-title:after {
+		left: 75%;
+    	top: 9%;
+	}
+	
+	.about-element, .database-element, .training-element {
+		background-position:  93% top;
+	}	
+}
+
+@media(max-width:676px){
+	.about-title:before {
+		top:35%
+	}
+	
+	.about-title:after {
+		right: 10%;
+		top:35%
+	}
+	
+	.training-title:before {
+		top:38%
+	}
+	
+	.training-title:after {
+		top:40%
+	}
+	
+	.database-title:before {
+		left: 12%;
+    	top: 39%;
+	}
+	
+	.database-title:after {
+		right: 10%;
+    	top: 35%;
+	}
+	
+	.contact-title:after {
+		left: 90%;
+    	top: 10%;
+	}
+	
+	.about-element, .database-element, .training-element {
+		background-position:  right top;
+	}	
+}
+
+@media(max-width:580px){
+	.about-title:before {
+		left: 3%;
+		top:34%
+	}
+	
+	.about-title:after,
+	.training-title:after {
+		right: 3%;
+	}
+	
+	.training-title:before {
+		left: -2%;
+    	top: 37%;
+	}
+	
+	.training-title:after {
+    	top: 40%;
+	}
+	
+	.database-title:before {
+		left: 5%;
+    	top: 40%;
+	}
+	
+	.database-title:after {
+    	right: 5%;
+	}
+	
+	.contact-title:after {
+    	left: 95%;
+		top:10%
+	}
+	
+	.about-element, .database-element, .training-element {
+		background-size:  auto 66%;
+	}
+}
